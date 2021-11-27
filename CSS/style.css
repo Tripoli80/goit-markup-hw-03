@@ -1,0 +1,16 @@
+:root{
+    --theme-color: #2196F3;
+    --text-primary: #757575;
+    --text-secondary: #212121;
+    --text-secondary-liter : #FFFFFF;
+    
+    --font-primary: 'Roboto';
+    --font-logo: 'Raleway';
+}
+body{
+    font-family:var(--font-primary);
+    
+}
+ul, ol{
+    list-style: none;
+}
