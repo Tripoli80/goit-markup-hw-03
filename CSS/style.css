@@ -1,16 +1,181 @@
-:root{
-    --theme-color: #2196F3;
-    --text-primary: #757575;
-    --text-secondary: #212121;
-    --text-secondary-liter : #FFFFFF;
-    
-    --font-primary: 'Roboto';
-    --font-logo: 'Raleway';
+:root {
+  --theme-color: #2196f3;
+  --bcg-main: #ffffff;
+  --text-logo: #000000;
+  --text-primary: #212121;
+  --text-secondary: #757575;
+  --text-secondary-liter: #ffffff;
+  --text-secondary-lite-fill: rgba(255, 255, 255, 0.6);
+
+  --font-primary: "Roboto";
+  --font-primary-rezerv: "sans-serif";
+  --font-logo: "Raleway";
 }
-body{
-    font-family:var(--font-primary);
-    
+body {
+  background-color: var(--bcg-main);
+  font-family: var(--font-primary), var(--font-primary-rezerv);
 }
-ul, ol{
-    list-style: none;
+.off {
+  display: none;
+}
+.logo {
+  font-family: var(--font-logo);
+  font-size: 26px;
+  font-weight: 700;
+  color: #2196f3;
+}
+
+.logo .second {
+  color: var(--text-logo);
+}
+
+/* подвал */
+.footer {
+  font: inherit;
+  font-size: 14px;
+  color: var(--text-secondary-liter);
+}
+.footer .logo .second {
+  color: var(--text-secondary-liter);
+}
+.footer .address {
+  font-style: normal;
+}
+
+.list {
+  list-style: none;
+}
+.nav {
+  letter-spacing: 0.02em;
+  line-height: 1, 14;
+  font-size: 14px;
+}
+.nav > .link {
+  color: var(--text-primary);
+
+  font-weight: 500;
+}
+.nav .current {
+  color: var(--theme-color);
+}
+.nav .link:hover,
+.nav .link:focus {
+  color: var(--theme-color);
+}
+.e-header .contact {
+  letter-spacing: 0.02em;
+  line-height: 1, 14;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+.e-header .contact:hover,
+.contact:focus {
+  color: var(--theme-color);
+}
+.footer {
+  background-color: #2f303a;
+}
+.footer .contact {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-secondary-lite-fill);
+}
+.footer .contact:hover,
+.contact:focus {
+}
+/* <!-- Эффективные решения для вашего бизнеса --> */
+.herro {
+  text-align: center;
+  background-color: #2f303a;
+  color: var(--text-secondary-liter);
+}
+.herro .title {
+  text-align: center;
+  font-size: 44px;
+  font-weight: 900;
+}
+/* section-title */
+
+.section {
+}
+.section .title {
+  color: var(--text-primary);
+  font-size: 36px;
+  text-align: center;
+}
+.section .item {
+  color: var(--text-primary);
+}
+.section .description {
+  color: var(--text-secondary);
+}
+.allingcentr {
+  text-align: center;
+}
+.comand {
+  background-color: #f5f4fa;
+}
+.comand .item {
+  text-align: center;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.comand .description {
+  text-align: center;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  font-size: 16px;
+}
+.comand li,
+.comand-box {
+  background-color: var(--text-secondary-liter);
+}
+
+.why-we .item {
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+}
+.why-we .description {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+}
+.portfolio .item {
+  letter-spacing: 0.06em;
+  line-height: 2;
+  font-size: 18px;
+}
+.portfolio .description {
+  font-size: 16px;
+}
+.filter .exp-button {
+  background-color: #f5f4fa;
+  font-size: 16px;
+  font-weight: 500;
+  width: 128px;
+  height: 38px;
+  text-align: center;
+}
+.filter .exp-button:hover,
+.filter .exp-button:focus {
+  cursor: pointer;
+  color: var(--text-secondary-liter);
+  background-color: var(--theme-color);
+}
+.herro .exp-button {
+  background-color: var(--theme-color);
+  color: var(--text-secondary-liter);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  width: 200px;
+  height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
 }
