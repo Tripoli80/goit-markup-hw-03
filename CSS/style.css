@@ -15,6 +15,9 @@ body {
   background-color: var(--bcg-main);
   font-family: var(--font-primary), var(--font-primary-rezerv);
 }
+a{
+  text-decoration: none;
+}
 .off {
   display: none;
 }
@@ -43,19 +46,27 @@ body {
 }
 
 .list {
+  
   list-style: none;
 }
 .nav {
   letter-spacing: 0.02em;
-  line-height: 1, 14;
+  line-height: 1.14;
   font-size: 14px;
 }
 .nav > .link {
-  color: var(--text-primary);
 
-  font-weight: 500;
+font-family: var(--font-primary);
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.02em;
+color: var(--text-primary);
 }
+ 
 .nav .current {
+
   color: var(--theme-color);
 }
 .nav .link:hover,
@@ -64,7 +75,7 @@ body {
 }
 .e-header .contact {
   letter-spacing: 0.02em;
-  line-height: 1, 14;
+  line-height: 1.14;
   font-size: 14px;
   font-weight: 500;
   color: var(--text-secondary);
@@ -155,10 +166,13 @@ body {
 }
 .filter .exp-button {
   background-color: #f5f4fa;
-  font-size: 16px;
-  font-weight: 500;
-  width: 128px;
-  height: 38px;
+  font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.625;
+
+
   text-align: center;
 }
 .filter .exp-button:hover,
