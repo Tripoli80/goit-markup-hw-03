@@ -18,6 +18,16 @@ body {
 a {
   text-decoration: none;
 }
+ul {
+  padding: 0px;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0 0 0 0;
+}
 .off {
   display: none;
 }
@@ -26,33 +36,29 @@ a {
   font-size: 26px;
   font-weight: 700;
   color: #2196f3;
+  margin-right: 95px;
 }
 
 .logo .second {
   color: var(--text-logo);
 }
 
-/* подвал */
-.footer {
-  font: inherit;
-  font-size: 14px;
-  color: var(--text-secondary-liter);
-}
-.footer .logo .second {
-  color: var(--text-secondary-liter);
-}
-.footer .address {
-  font-style: normal;
-    
-  font-family: Roboto;
-line-height:1.71;
-  font-weight: 400;
-}
+.container {
+  margin-left: calc(0.26875 * 100% / 2);
+  margin-right: calc(0.26875 * 100% / 2);
 
-.list {
-  list-style: none;
+  /* margin-left: 215px;
+  margin-right: 215px; */
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
 }
 .nav {
+  display: flex;
+  align-items: center;
+
   letter-spacing: 0.02em;
   line-height: 1.14;
   font-size: 14px;
@@ -64,7 +70,16 @@ line-height:1.71;
   letter-spacing: 0.02em;
   color: var(--text-primary);
 }
-.nav  .link {
+.flex-list {
+  display: flex;
+}
+.list {
+  list-style: none;
+}
+.headet-list-item + .headet-list-item {
+  margin-left: 50px;
+}
+.nav .link {
   font-family: var(--font-primary);
   font-style: normal;
   font-weight: 500;
@@ -81,12 +96,23 @@ line-height:1.71;
 .nav .link:focus {
   color: var(--theme-color);
 }
+.e-header {
+}
+
+.e-header .contact + .contact {
+  margin-left: 50px;
+}
 .e-header .contact {
   letter-spacing: 0.02em;
   line-height: 1.14;
   font-size: 14px;
   font-weight: 500;
   color: var(--text-secondary);
+}
+
+.heder-contact {
+  margin-left: auto;
+  display: flex;
 }
 .e-header .contact:hover,
 .contact:focus {
@@ -96,13 +122,10 @@ line-height:1.71;
   background-color: #2f303a;
 }
 .footer .contact {
-
   font-size: 14px;
   font-family: Roboto;
 
-
-
-line-height:1.71;
+  line-height: 1.71;
   font-weight: 400;
   color: var(--text-secondary-lite-fill);
 }
@@ -111,6 +134,7 @@ line-height:1.71;
 }
 /* <!-- Эффективные решения для вашего бизнеса --> */
 .herro {
+  margin-top: 25px;
   text-align: center;
   background-color: #2f303a;
   color: var(--text-secondary-liter);
@@ -119,6 +143,10 @@ line-height:1.71;
   text-align: center;
   font-size: 44px;
   font-weight: 900;
+}
+.herro-conteiner {
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 /* section-title */
 
@@ -133,13 +161,88 @@ line-height:1.71;
   color: var(--text-primary);
 }
 .section .description {
+  margin-top: 10px;
   color: var(--text-secondary);
 }
 .allingcentr {
   text-align: center;
 }
+
+/*  ПОЧЕМУ МЫ */
+.why-we {
+}
+
+.why-we-container {
+  margin-top: 95px;
+}
+
+.why-we-list {
+  display: flex;
+  margin-left: -30px;
+}
+.why-we-item {
+  width: calc(100% / 4 - 30px);
+  margin-left: 30px;
+  flex-wrap: wrap;
+  /* width: 100px; */
+}
+.why-we-item + .why-we-item {
+}
+.why-we li {
+  /* max-width: 270px; */
+}
+
+.why-we .item {
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+}
+.why-we .description {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+}
+
+/* наша работа */
+.our-work {
+  margin-top: 95px;
+}
+.our-work-list {
+  display: flex;
+  margin-left: -30px;
+  margin-top: 50px;
+}
+.our-work-item {
+  width: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  flex-wrap: wrap;
+}
+.our-work img {
+  width: 100%;
+}
+/* Наша команда */
+
 .comand {
+  margin-top: 95px;
   background-color: #f5f4fa;
+  padding-bottom: 95px;
+}
+
+.our-comand {
+  padding-top: 95px;
+}
+.our-comand-list {
+  margin-top: 50px;
+  display: flex;
+  margin-left: -30px;
+}
+.our-comand-item {
+  width: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  flex-wrap: wrap;
+}
+.our-comand-item img {
+  width: 100%;
 }
 .comand .item {
   text-align: center;
@@ -156,20 +259,48 @@ line-height:1.71;
   font-size: 16px;
 }
 .comand li,
-.comand-box {
+.our-comand-item {
   background-color: var(--text-secondary-liter);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.comand-item-txt {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.why-we .item {
-  line-height: 1.14;
-  letter-spacing: 0.03em;
+/* подвал */
+
+.footer {
+  font: inherit;
   font-size: 14px;
+  color: var(--text-secondary-liter);
 }
-.why-we .description {
+.our-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer .logo .second {
+  color: var(--text-secondary-liter);
+}
+.footer .address {
+  font-style: normal;
+
+  font-family: Roboto;
   line-height: 1.71;
-  letter-spacing: 0.03em;
-  font-size: 14px;
+  font-weight: 400;
 }
+.footer-contact {
+  margin-top: 20px;
+}
+
+/* Страница 2 */
+
+.our-portfolio {
+  margin-top: 95px;
+}
+
 .portfolio .item {
   letter-spacing: 0.06em;
   line-height: 2;
@@ -178,21 +309,61 @@ line-height:1.71;
 .portfolio .description {
   font-size: 16px;
 }
-.filter .exp-button {
+
+.portfolio-filter {
+  display: flex;
+  justify-content: center;
+}
+.portfolio-exp-button {
+  margin-left: 10px;
   background-color: #f5f4fa;
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
-
   text-align: center;
+  border-radius: 4px;
+  border: 0;
 }
-.filter .exp-button:hover,
-.filter .exp-button:focus {
+.portfolio-exp-button:hover,
+.portfolio-exp-button:focus {
   cursor: pointer;
   color: var(--text-secondary-liter);
   background-color: var(--theme-color);
+}
+
+.exp-butt-txt {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.portfolio-list {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+  margin-top: 35px;
+}
+.portfolio-exemple {
+  box-sizing: border-box;
+  padding-bottom: 95px;
+}
+.portfolio-exemple-item {
+  box-sizing: border-box;
+  /* width: 370px; */
+  width: calc(100% / 3+30px);
+  margin-left: 30px;
+  margin-bottom: 30px;
+  border: solid 1px #eeeeee;
+}
+
+.portfolio-exemple-item img {
+  width: 100%;
+}
+.portfolio-exemple-txt {
+  margin: 20px 24px;
 }
 .herro .exp-button {
   background-color: var(--theme-color);
@@ -205,4 +376,5 @@ line-height:1.71;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
+  margin-top: 30px;
 }
