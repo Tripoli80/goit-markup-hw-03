@@ -19,6 +19,7 @@ a {
   text-decoration: none;
 }
 ul {
+  list-style: none;
   padding: 0px;
   margin: 0;
 }
@@ -28,8 +29,22 @@ h3,
 p {
   margin: 0 0 0 0;
 }
+img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+button {
+  display: block;
+  padding: 0;
+}
 .off {
-  display: none;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  visibility: hidden;
+  /* float: left; */
+  /* display: none; */
 }
 .logo {
   font-family: var(--font-logo);
@@ -44,17 +59,17 @@ p {
 }
 
 .container {
-  margin-left: calc(0.26875 * 100% / 2);
-  margin-right: calc(0.26875 * 100% / 2);
-  min-width: 1200px;
-
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding: 0 15px;
   /* margin-left: 215px;
   margin-right: 215px; */
 }
 .header-container {
   display: flex;
   align-items: center;
-  margin-top: 25px;
+  /* margin-top: 25px; */
 }
 .nav {
   display: flex;
@@ -81,6 +96,8 @@ p {
   margin-left: 50px;
 }
 .nav .link {
+  padding: 30px 0;
+  display: block;
   font-family: var(--font-primary);
   font-style: normal;
   font-weight: 500;
@@ -111,10 +128,18 @@ p {
   color: var(--text-secondary);
 }
 
-.heder-contact {
+.heder-contact-list {
   margin-left: auto;
   display: flex;
 }
+
+.heder-contact-item {
+  width: calc(100% / 2 - 30px);
+  margin-left: 30px;
+  flex-wrap: wrap;
+  /* width: 100px; */
+}
+
 .e-header .contact:hover,
 .contact:focus {
   color: var(--theme-color);
@@ -135,33 +160,62 @@ p {
 }
 /* <!-- Эффективные решения для вашего бизнеса --> */
 .herro {
-  margin-top: 25px;
+  /* margin-top: 25px; */
+  padding: 200px 0;
   text-align: center;
+
   background-color: #2f303a;
   color: var(--text-secondary-liter);
 }
-.herro .title {
+.herro-title {
   text-align: center;
   font-size: 44px;
   font-weight: 900;
+  line-height: 60px;
 }
 .herro-conteiner {
   padding-top: 200px;
   padding-bottom: 200px;
 }
+.herro-exp-button {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+
+  background-color: var(--theme-color);
+
+  width: 200px;
+  height: 50px;
+  border: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.herro-button-txt {
+  color: var(--text-secondary-liter);
+  font-size: 16px;
+  font-weight: 700;
+  font-family: var(--font-primary);
+  line-height: 1.875;
+  /* identical to box height, or 187% */
+  align-items: center;
+  text-align: center;
+}
+
 /* section-title */
 
 .section {
+  padding: 94px 0;
 }
-.section .title {
+.section-title {
   color: var(--text-primary);
   font-size: 36px;
   text-align: center;
 }
-.section .item {
+.section-item {
   color: var(--text-primary);
 }
-.section .description {
+.section-description {
   margin-top: 10px;
   color: var(--text-secondary);
 }
@@ -193,18 +247,24 @@ p {
   /* max-width: 270px; */
 }
 
-.why-we .item {
+.section-we-item {
+  color: var(--font-primary);
   line-height: 1.14;
   letter-spacing: 0.03em;
   font-size: 14px;
 }
-.why-we .description {
+.section-we-description {
+  margin-top: 10px;
+  color: var(--text-secondary);
   line-height: 1.71;
   letter-spacing: 0.03em;
   font-size: 14px;
 }
 
 /* наша работа */
+.work-section {
+  padding-top: 0;
+}
 .our-work {
   margin-top: 95px;
 }
@@ -218,15 +278,13 @@ p {
   margin-left: 30px;
   flex-wrap: wrap;
 }
-.our-work img {
-  width: 100%;
-}
+
 /* Наша команда */
 
 .comand {
-  margin-top: 95px;
+  /* margin-top: 95px; */
   background-color: #f5f4fa;
-  padding-bottom: 95px;
+  /* padding-bottom: 95px; */
 }
 
 .our-comand {
@@ -242,10 +300,9 @@ p {
   margin-left: 30px;
   flex-wrap: wrap;
 }
-.our-comand-item img {
-  width: 100%;
-}
-.comand .item {
+
+.comand-user-item {
+  color: var(--text-primary);
   text-align: center;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -253,7 +310,9 @@ p {
   font-weight: 500;
 }
 
-.comand .description {
+.comand-user-description {
+  color: var(--text-secondary);
+  margin-top: 10px;
   text-align: center;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -274,14 +333,13 @@ p {
 /* подвал */
 
 .footer {
-  font: inherit;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  /* font: inherit; */
   font-size: 14px;
   color: var(--text-secondary-liter);
 }
-.our-footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
+
 .footer .logo .second {
   color: var(--text-secondary-liter);
 }
@@ -295,20 +353,29 @@ p {
 .footer-contact {
   margin-top: 20px;
 }
-
+.footer .logo {
+  margin-right: 0;
+}
+.footer-item:not(:last-child) {
+  margin-bottom: 9px;
+}
 /* Страница 2 */
 
-.our-portfolio {
-  margin-top: 95px;
-}
-
-.portfolio .item {
+.portfolio-item {
+  color: var(--text-primary);
   letter-spacing: 0.06em;
   line-height: 2;
   font-size: 18px;
 }
-.portfolio .description {
+.portfolio-filter-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.portfolio-description {
+  margin-top: 4px;
+  color: var(--text-secondary);
   font-size: 16px;
+  line-height: 1.875;
 }
 
 .portfolio-filter {
@@ -316,7 +383,7 @@ p {
   justify-content: center;
 }
 .portfolio-exp-button {
-  margin-left: 10px;
+  /* margin-left: 10px; */
   background-color: #f5f4fa;
   font-family: Roboto;
   font-style: normal;
@@ -335,18 +402,26 @@ p {
 }
 
 .exp-butt-txt {
-  padding-left: 20px;
-  padding-right: 20px;
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  padding: 6px 22px;
+}
+
+.exp-butt-txt:focus,
+.exp-butt-txt:hover {
+  color: var(--text-secondary-liter);
+  font-family: var(--font-primary);
+  padding: 6px 22px;
 }
 
 .portfolio-list {
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /* justify-content: center; */
   margin-left: -30px;
   margin-bottom: -30px;
-  margin-top: 35px;
+  margin-top: 50px;
 }
 .portfolio-exemple {
   box-sizing: border-box;
@@ -360,26 +435,9 @@ p {
   margin-bottom: 30px;
 }
 
-.portfolio-exemple-item img {
-  width: 100%;
-  display: block;
-}
 .portfolio-exemple-txt {
   border-bottom: solid 1px #eeeeee;
   border-left: solid 1px #eeeeee;
   border-right: solid 1px #eeeeee;
   padding: 20px 24px;
-}
-.herro .exp-button {
-  background-color: var(--theme-color);
-  color: var(--text-secondary-liter);
-  text-align: center;
-  font-size: 16px;
-  font-weight: 700;
-  width: 200px;
-  height: 50px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 30px;
 }
