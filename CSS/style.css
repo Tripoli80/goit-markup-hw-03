@@ -359,14 +359,18 @@ p {
   width: calc(100% / 3+30px);
   margin-left: 30px;
   margin-bottom: 30px;
-  border: solid 1px #eeeeee;
+  
 }
 
 .portfolio-exemple-item img {
   width: 100%;
+  display: block;
 }
 .portfolio-exemple-txt {
-  margin: 20px 24px;
+  border-bottom: solid 1px #eeeeee;
+  border-left: solid 1px #eeeeee;
+  border-right: solid 1px #eeeeee;
+  padding:  20px 24px;
 }
 .herro .exp-button {
   background-color: var(--theme-color);
