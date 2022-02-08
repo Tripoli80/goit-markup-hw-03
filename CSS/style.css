@@ -46,6 +46,7 @@ p {
 .container {
   margin-left: calc(0.26875 * 100% / 2);
   margin-right: calc(0.26875 * 100% / 2);
+  min-width: 1200px;
 
   /* margin-left: 215px;
   margin-right: 215px; */
