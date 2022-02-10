@@ -46,6 +46,13 @@ button {
   /* float: left; */
   /* display: none; */
 }
+.visually-hidden{
+   position: absolute;
+   clip: rect(0 0 0 0);
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+}
 .logo {
   font-family: var(--font-logo);
   font-size: 26px;
@@ -133,9 +140,9 @@ button {
   display: flex;
 }
 
-.heder-contact-item {
-  width: calc(100% / 2 - 30px);
-  margin-left: 30px;
+.heder-contact-item:not(:first-child) {
+    /* width: calc(100% / 2 - 30px); */
+  margin-left: 50px;
   flex-wrap: wrap;
   /* width: 100px; */
 }
@@ -358,6 +365,9 @@ button {
 }
 .footer-item:not(:last-child) {
   margin-bottom: 9px;
+}
+.footer-item a {
+  color: var(--bcg-main);
 }
 /* Страница 2 */
 
